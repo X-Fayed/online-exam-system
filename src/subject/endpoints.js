@@ -1,0 +1,6 @@
+const ADD_SUBJECT = `subject:ADD_SUBJECT`;
+const GET_SUBJECTS = `subject:GET_SUBJECT`;
+const DELETE_SUBJECT = `subject:DELETE_SUBJECT`;
+const UPDATE_SUBJECT = `subject:UPDATE_SUBJECT`;
+
+module.exports = { ADD_SUBJECT, GET_SUBJECTS, DELETE_SUBJECT, UPDATE_SUBJECT };
