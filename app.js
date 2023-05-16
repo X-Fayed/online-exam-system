@@ -2,8 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const dbConnection = require("./config/db");
 const app = express();
-app.use(express.json({ extended: true }));
-app.use(express.urlencoded({ extended: true }));
+
+
 
 require("dotenv").config();
 const examRoutes = require("./src/exam/routes/exam.routes.js");
@@ -18,7 +18,8 @@ const answerRoutes = require("./src/examAnswers/routes/answer.routes");
 const port = 5000 ;
 
 //***public middelware */
-app.use(express.json());
+app.use(express.json({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 dbConnection();
