@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const dbConnection = require("./config/db");
 const app = express();
 app.use(express.json({ extended: true }));
@@ -18,6 +19,7 @@ const port = 5000 ;
 
 //***public middelware */
 app.use(express.json());
+app.use(cors());
 
 dbConnection();
 
